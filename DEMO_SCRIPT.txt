@@ -1,0 +1,18 @@
+DEMO PRACTICE AND OPTIONAL VOICE SCRIPT
+
+My name is Zohaib Abdullah. This is my web based text encryption tool for Information Security.
+
+First I choose Caesar cipher and type Attack at dawn. With shift 3, the letters move forward by three. When I use the result as input and decrypt it with the same shift, I recover the message.
+
+Next I choose Vigenere. The message ATTACKATDAWN and keyword LEMON produce LXFOPVEFRNHR. The keyword gives a repeating pattern of shifts.
+
+Next I choose AES. I enter a message and a sample password of at least 12 characters. The encrypted result includes random values, so encrypting the same text twice can produce different results. The same password and complete result recover the message.
+
+I can copy a result using this button. I can also select SHA-256 to create a hash. A hash is one way and cannot be decrypted.
+
+The app rejects empty text, missing methods and invalid keys. The three encryption methods meet the core requirement, and decryption, hashing and copying are bonus features. The hosted version processes text in the browser. Running node server.cjs enables a local backend that processes requests on my own computer.
+
+VIVA QUICK ANSWERS
+Encryption can be reversed with the correct key. Hashing creates a fingerprint and is one way. Base64 is an encoding, not encryption. Caesar and Vigenere are weak learning examples. AES is the modern method here. AES-GCM also detects changes to the encrypted data. A salt helps password key derivation; an IV makes each encryption different. Neither the salt nor IV is a password. Both are stored with the result so decryption can work.
+
+The supplied video uses real browser screenshots with captions. If your teacher asks for your own spoken screen recording, use this script while demonstrating the app and record your own voice. Never use your real account password as the sample encryption password.

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore Caesar, Vigenere and AES encryption in a simple text encryption lab.">
+  <title>Text Encryption Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="crypto.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="top"><a href="./" class="brand"><span class="mark" aria-hidden="true">T</span> Text Encryption Lab</a><span class="course">Information Security · Assignment 2</span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">A SMALL LAB FOR BIG IDEAS</p><h1>Turn your text<br>into a secret.</h1><p class="lead">Try three encryption methods, recover your message,<br class="wide"> or make a SHA-256 hash. <span id="processingMode">Everything runs in your browser.</span></p></div><div class="intro-aside"><span class="aside-label">YOUR WORKSPACE</span><p>No account needed.<br>No messages saved.<br><span id="serverNote">No text sent to a server.</span></p></div></section>
+  <section class="workspace" aria-label="Text encryption workspace">
+    <aside class="controls">
+      <div class="tabs" role="group" aria-label="Operation"><button type="button" id="encryptMode" aria-pressed="true">Encrypt</button><button type="button" id="decryptMode" aria-pressed="false">Decrypt</button></div>
+      <label for="algorithm">Choose a method</label>
+      <select id="algorithm"><option value="">Select a method</option><option value="aes">AES-256-GCM</option><option value="caesar">Caesar cipher</option><option value="vigenere">Vigenère cipher</option><option value="sha256">SHA-256 hash</option></select>
+      <p id="methodHelp" class="hint">Choose a method to see how it works.</p>
+      <div id="shiftGroup" hidden><label for="shift">Letter shift</label><input id="shift" type="number" min="1" max="25" value="3"><p class="hint">A shift of 3 turns A into D.</p></div>
+      <div id="keywordGroup" hidden><label for="keyword">Keyword</label><input id="keyword" type="text" placeholder="For example LEMON" autocomplete="off" spellcheck="false"><p class="hint">Use letters A to Z only.</p></div>
+      <div id="passwordGroup" hidden><label for="password">Password</label><input id="password" type="password" placeholder="At least 12 characters" autocomplete="off"><label class="show"><input type="checkbox" id="showPassword"> Show password</label><p class="hint">Keep this password. You need it to decrypt.</p></div>
+      <button type="button" id="run" class="primary">Encrypt text</button>
+      <p class="local-note">Your message stays in this page.</p>
+    </aside>
+    <div class="editor">
+      <div class="editor-head"><label for="input" id="inputLabel">Your message</label><button type="button" id="example" class="text-button">Load an example</button></div>
+      <textarea id="input" rows="6" maxlength="100000" placeholder="Type or paste your text here…" spellcheck="false"></textarea>
+      <div class="meta"><span id="count">0 characters</span><button type="button" id="clear" class="text-button">Clear all</button></div>
+      <div class="output-head"><label for="output" id="outputLabel">Encrypted result</label><div><button type="button" id="useResult" class="small-button" disabled>Use as input</button><button type="button" id="copy" class="small-button" disabled>Copy result</button></div></div>
+      <textarea id="output" rows="6" readonly placeholder="Your result will appear here." spellcheck="false"></textarea>
+      <p id="status" role="status" aria-live="polite">Ready when you are.</p>
+    </div>
+  </section>
+  <section class="learn" aria-label="About the methods"><article><span class="tag">CLASSIC</span><h2>See the pattern</h2><p>Caesar and Vigenère change letters using a shift or keyword. They are useful for learning, but easy to break.</p></article><article><span class="tag">MODERN</span><h2>Protect a message</h2><p>AES uses your password and fresh random values. Keep the complete result so you can decrypt it later.</p></article><article><span class="tag">ONE WAY</span><h2>Make a fingerprint</h2><p>SHA-256 creates a fixed length hash. A hash cannot be decrypted. It is different from encryption.</p></article></section>
+</main>
+<footer><span>Built by Zohaib Abdullah</span><span>Information Security learning project</span></footer>
+</body></html>

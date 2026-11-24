@@ -1,0 +1,37 @@
+{
+  "total": 8,
+  "tests": [
+    {
+      "name": "Server serves backend enabled interface",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend Caesar result",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend Vigenere result",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend hash result",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend AES round trip",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend rejects empty text and missing method",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend rejects cross origin browser requests",
+      "result": "PASS"
+    },
+    {
+      "name": "Backend exposes no arbitrary file routes",
+      "result": "PASS"
+    }
+  ]
+}

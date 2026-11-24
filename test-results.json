@@ -1,0 +1,66 @@
+{
+  "runtime": "v24.22.3",
+  "total": 15,
+  "tests": [
+    {
+      "name": "Caesar known answer",
+      "result": "PASS"
+    },
+    {
+      "name": "Caesar decryption and wrap",
+      "result": "PASS"
+    },
+    {
+      "name": "Reject empty and whitespace text",
+      "result": "PASS"
+    },
+    {
+      "name": "Reject invalid shift",
+      "result": "PASS"
+    },
+    {
+      "name": "Vigenere known answer",
+      "result": "PASS"
+    },
+    {
+      "name": "Vigenere round trip and punctuation",
+      "result": "PASS"
+    },
+    {
+      "name": "Reject missing and invalid keyword",
+      "result": "PASS"
+    },
+    {
+      "name": "SHA256 known answer",
+      "result": "PASS"
+    },
+    {
+      "name": "AES Unicode round trip",
+      "result": "PASS"
+    },
+    {
+      "name": "AES random salt and IV",
+      "result": "PASS"
+    },
+    {
+      "name": "AES rejects wrong password",
+      "result": "PASS"
+    },
+    {
+      "name": "AES rejects changed ciphertext",
+      "result": "PASS"
+    },
+    {
+      "name": "AES rejects short password",
+      "result": "PASS"
+    },
+    {
+      "name": "AES rejects invalid envelope",
+      "result": "PASS"
+    },
+    {
+      "name": "Input length limit",
+      "result": "PASS"
+    }
+  ]
+}
